@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | zetoxcz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(120, 90, 255, 0.2);
+            padding-bottom: 20px;
+        }
 
+        .header .back-btn {
+            color: #785aff;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+            width: 40px;
+            text-align: left;
+        }
+
+        .header .back-btn:hover {
+            color: #a88aff;
+            transform: translateX(-3px);
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+            flex: 1; 
+        }
+
+        .header span {
+            width: 40px; 
+        }
+        .report-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            transition: 0.3s;
+            background: rgba(255, 255, 255, 0.02);
+            text-decoration: none;
+            color: #e0e0e0;
+        }
+        .report-item:hover {
+            background: rgba(120, 90, 255, 0.08);
+            border-color: rgba(120, 90, 255, 0.3);
+            transform: translateX(4px);
+        }
+        .report-item i {
+            font-size: 20px;
+            color: #785aff;
+            width: 30px;
+        }
+        .report-item .info {
+            flex: 1;
+        }
+        .report-item .title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .report-item .desc {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 2px;
+        }
+        .report-item .date {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.25);
+        }
+        .empty {
+            text-align: center;
+            color: rgba(255,255,255,0.2);
+            padding: 60px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+            <h1><i class="fas fa-folder-open" style="color: #785aff;"></i> Reports</h1>
+            <span></span>
+        </div>
+
+        <a href="/reports/" class="report-item">
+            <i class="fas fa-file-lines"></i>
+            <div class="info">
+                <div class="title">RE // SolaraBootstrapper.exe</div>
+                <div class="desc"></div>
+            </div>
+            <div class="date">Июнь 2026</div>
+        </a>
+
+        <a href="/reports/" class="report-item">
+            <i class="fas fa-file-lines"></i>
+            <div class="info">
+                <div class="title">RE // Тестовый отчет</div>
+                <div class="desc"></div>
+            </div>
+            <div class="date">Май 2026</div>
+        </a>
+
+        <div style="margin-top: 40px; font-size: 13px; color: rgba(255,255,255,0.15); text-align: center;">
+            Всего отчетов: 2
+        </div>
+    </div>
+</body>
+</html>
