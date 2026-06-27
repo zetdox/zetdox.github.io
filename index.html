@@ -1,49 +1,174 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
-        <title>zetoxcz</title>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zetoxcz</title>
 
-        <style>
-            body {
-                background: #0a0a0a;
-                display: flex;
-                justify-content: center;
-                padding: 20px;
-                font-family: 'Montserrat', sans-serif;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+            background: radial-gradient(circle at 50% 30%, #111 0%, #0a0a0a 80%);
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            padding: 40px 20px;
+            border: 1px solid rgba(120, 90, 255, 0.15);
+            border-radius: 24px;
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(4px);
+            transition: border-color 0.4s ease;
+        }
+
+        .container:hover {
+            border-color: rgba(120, 90, 255, 0.4);
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 12px;
+            display: block;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid rgba(120, 90, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+            border-color: #785aff;
+            box-shadow: 0 0 30px rgba(120, 90, 255, 0.2);
+        }
+
+        .m_title {
+            font-weight: 700;
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-weight: 400;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 28px;
+            letter-spacing: 2px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: rgba(255, 255, 255, 0.04);
+            color: #a88aff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(120, 90, 255, 0.2);
+            border-radius: 40px;
+            transition: all 0.25s ease;
+            letter-spacing: 0.3px;
+            backdrop-filter: blur(2px);
+        }
+
+        .links a i {
+            font-size: 16px;
+            color: #785aff;
+            transition: color 0.25s ease;
+        }
+
+        .links a:hover {
+            background: #785aff;
+            color: #0a0a0a;
+            border-color: #785aff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(120, 90, 255, 0.25);
+        }
+
+        .links a:hover i {
+            color: #0a0a0a;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.12);
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 28px 16px;
             }
-
             .m_title {
-                font-weight: bold;
-                color: #fff;
-                margin-bottom: 10px;
+                font-size: 26px;
             }
-
-            .links {
-                display: flex;
-                justify-content: center;
-                gap: 30px;
-                flex-wrap: wrap;
-                margin-top: 10px;
-            }
-
             .links a {
-                color: #785aff;
-                text-decoration: none;
-                font-size: 12px;
-                transition: all 0.3s ease;
-                background: #111;
+                padding: 10px 20px;
+                font-size: 13px;
+                width: 100%;
+                justify-content: center;
             }
-        </style>
-    </head>
+        }
+    </style>
+</head>
+<body>
 
     <div class="container">
+        <div class="avatar">
+            <img src="avatar.png" alt="zetoxcz">
+        </div>
+
         <h1 class="m_title">zetoxcz</h1>
+        <div class="subtitle">reverse engineer &amp; malware analyst</div>
 
         <div class="links">
-            <a href="https://github.com/zetdox">GitHub</a>
-            <a href="https://www.youtube.com/@zetoxczlol">YouTube</a>
+            <a href="https://github.com/zetdox" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="" target="_blank">
+                <i class="fab fa-folder"></i> Reports
+            </a>
         </div>
+
+        <div class="footer">✦ 0x00 ✦</div>
+
     </div>
+
+</body>
 </html>
