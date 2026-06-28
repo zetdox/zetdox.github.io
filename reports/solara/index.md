@@ -122,13 +122,13 @@ jnz short loc_140004F01
 Так же, программа имеет широкий спектр проверок, на стадии запуска программа проверяет не запущена ли она на виртуальной машине (**Hyper-V, qemu**), проверяет устройство на такие программы как: **IDA Pro, x64dbg, x32dbg, Wireshark, HxD, ProcessHacker**. Также идентифицированы имена пользователей и компьютеров (**WALKER, John, Abby, Bruno, George**), используемые для проверки на наличие защитных песочниц.
 
 ```hex
-M�o�d�e�l�� x�3�2�d�b�g�� x�6�4�d�b�g�� w�i�n�d�b�g��o�l�l�y�d�b�g��d�n�s�p�y��#i�m�m�u�n�i�t�y� �d�e�b�u�g�g�e�r��h�y�p�e�r�d�b�g��i�d�a��i�d�a�6�4��c�h�e�a�t�e�n�g�i�n�e��c�h�e�a�t� �e�n�g�i�n�e��p�r�o�c�m�o�n��w�i�r�e�s�h�a�r�k��f�i�d�d�l�e�r��p�r�o�c�e�s�s�h�a�c�k�e�r��h�x�d��c�h�a�r�l�e�s�� b�u�r�p��b�u�r�p�s�u�i�t�e��p�o�s�t�m�a�n��t�e�l�e�r�i�k� �f�i�d�d�l�e�r��m�i�t�m�p�r�o�x�y��z�a�p��o�w�a�s�p� �z�a�p��p�r�o�x�y�m�a�n��h�t�t�p�d�e�b�u�g�g�e�r�� W�A�L�K�E�R��W�A�L�K�E�R�-�P�C�� J�o�h�n��J�O�H�N�-�P�C�� A�b�b�y��B�r�u�n�o�� g�e�o�r�g�e"
+Model x32dbg x64dbg windb gollydbg dnspy#immunity debugger hyperdbg ida ida64 cheatengine cheat engine procmon wireshark fiddler processhacker hxd charles
 ```
 
 При запуске программа проверяет и регион пользователя через запросы к `http://ip-api.com` в формате JSON, возможно чтобы потом передать информацию на C2-сервер.
 
 ```hex
-soft.CSharp�T�����r�u��/h�t�t�p�:�/�/�i�p�-�a�p�i�.�c�o�m�/�j�s�o�n�/��G�E�T��!a�p�p�l�i�c�a�t�i�o�n�/�j�s�o�n��c�o�u�n�t�r�y��c�o�u�n�t�r�y"
+soft.CSharpT ru/http://ip-api.com/json/GET!application/jsoncountrycountry"
 ```
 
 #### C2-сервера:
