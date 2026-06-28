@@ -135,7 +135,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            gap: 12px;
+            gap: 10px;
             align-self: flex-start;
         }
 
@@ -145,36 +145,36 @@
             white-space: nowrap;
         }
 
-        .lang-switch {
-            display: flex;
-            gap: 4px;
-            background: rgba(255, 255, 255, 0.03);
-            padding: 2px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .lang-btn {
-            font-size: 10px;
+        .lang-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
             font-weight: 700;
             text-decoration: none;
-            padding: 2px 8px;
-            border-radius: 6px;
+            color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 4px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(120, 90, 255, 0.15);
             transition: all 0.2s ease;
         }
 
-        .lang-btn.active {
-            background: #785aff;
-            color: #0a0a0a;
+        .lang-link i {
+            font-size: 11px;
+            color: #785aff;
+            transition: color 0.2s ease;
         }
 
-        .lang-btn.available {
-            color: rgba(255, 255, 255, 0.4);
-        }
-
-        .lang-btn.available:hover {
+        .lang-link:hover {
             color: #fff;
-            background: rgba(120, 90, 255, 0.2);
+            background: #785aff;
+            border-color: #785aff;
+            box-shadow: 0 4px 15px rgba(120, 90, 255, 0.2);
+        }
+
+        .lang-link:hover i {
+            color: #0a0a0a;
         }
 
         @media (max-width: 480px) {
@@ -190,6 +190,7 @@
             .report-item .meta-side {
                 flex-direction: row-reverse;
                 justify-content: space-between;
+                align-items: center;
                 width: 100%;
                 align-self: center;
                 border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -220,10 +221,7 @@
             </div>
             <div class="meta-side">
                 <div class="date">Июнь 2026</div>
-                <div class="lang-switch">
-                    <span class="lang-btn active">RU</span>
-                    <object><a href="/reports/solara/en/" class="lang-btn available" onclick="event.stopPropagation();">EN</a></object>
-                </div>
+                <object><a href="/reports/solara/en/" class="lang-link" onclick="event.stopPropagation();"><i class="fas fa-globe"></i> EN</a></object>
             </div>
         </a>
 
