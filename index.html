@@ -33,11 +33,13 @@
             border-radius: 24px;
             background: rgba(10, 10, 10, 0.6);
             backdrop-filter: blur(4px);
-            transition: border-color 0.4s ease;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
         }
 
         .container:hover {
-            border-color: rgba(120, 90, 255, 0.4);
+            border-color: rgba(120, 90, 255, 0.35);
+            background: rgba(15, 12, 25, 0.7);
+            box-shadow: 0 0 40px rgba(120, 90, 255, 0.05);
         }
 
         .avatar {
@@ -80,15 +82,21 @@
             letter-spacing: 2px;
         }
 
-        .links {
-            display: flex;
-            justify-content: center;
+        .links-wrapper {
+            display: inline-flex;
+            flex-direction: column;
             gap: 16px;
-            flex-wrap: wrap;
             margin-top: 4px;
+            width: max-content;
+            max-width: 100%;
         }
 
-        .links a {
+        .links-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .links-wrapper a {
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -103,15 +111,21 @@
             transition: all 0.25s ease;
             letter-spacing: 0.3px;
             backdrop-filter: blur(2px);
+            white-space: nowrap;
         }
 
-        .links a i {
+        .links-wrapper a.full-width {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .links-wrapper a i {
             font-size: 16px;
             color: #785aff;
             transition: color 0.25s ease;
         }
 
-        .links a:hover {
+        .links-wrapper a:hover {
             background: #785aff;
             color: #0a0a0a;
             border-color: #785aff;
@@ -119,7 +133,7 @@
             box-shadow: 0 8px 25px rgba(120, 90, 255, 0.25);
         }
 
-        .links a:hover i {
+        .links-wrapper a:hover i {
             color: #0a0a0a;
         }
 
@@ -137,7 +151,13 @@
             .m_title {
                 font-size: 26px;
             }
-            .links a {
+            .links-wrapper {
+                width: 100%;
+            }
+            .links-row {
+                flex-direction: column;
+            }
+            .links-wrapper a {
                 padding: 10px 20px;
                 font-size: 13px;
                 width: 100%;
@@ -156,12 +176,18 @@
         <h1 class="m_title">zetoxcz</h1>
         <div class="subtitle">reverse engineer &amp; malware analyst</div>
 
-        <div class="links">
-            <a href="https://github.com/zetdox" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="/reports/index.html" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-folder"></i> Reports
+        <div class="links-wrapper">
+            <div class="links-row">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="/reports/index.html" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-folder"></i> Reports
+                </a>
+            </div>
+            
+            <a href="/reports/" target="_blank" rel="noopener noreferrer" class="full-width">
+                <i class="fas fa-user-secret"></i> Crackmes
             </a>
         </div>
 
