@@ -122,13 +122,13 @@ jnz short loc_140004F01
 Так же, программа имеет широкий спектр проверок, на стадии запуска программа проверяет не запущена ли она на виртуальной машине (**Hyper-V, qemu**), проверяет устройство на такие программы как: **IDA Pro, x64dbg, x32dbg, Wireshark, HxD, ProcessHacker**. Также идентифицированы имена пользователей и компьютеров (**WALKER, John, Abby, Bruno, George**), используемые для проверки на наличие защитных песочниц.
 
 ```hex
-Model x32dbg x64dbg windb gollydbg dnspy#immunity debugger hyperdbg ida ida64 cheatengine cheat engine procmon wireshark fiddler processhacker hxd charles
+Model x32dbg x64dbg windb gollydbg dnspy#immunity debugger hyperdbg ida ida64 cheatengine cheat engine procmon wireshark fiddler processhacker hxd charles
 ```
 
 При запуске программа проверяет и регион пользователя через запросы к `http://ip-api.com` в формате JSON, возможно чтобы потом передать информацию на C2-сервер.
 
 ```hex
-soft.CSharpT ru/http://ip-api.com/json/GET!application/jsoncountrycountry"
+soft.CSharpT ru/http://ip-api.com/json/GET!application/jsoncountrycountry"
 ```
 
 #### C2-сервера:
