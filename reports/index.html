@@ -131,12 +131,50 @@
             letter-spacing: 0.5px;
         }
 
+        .report-item .meta-side {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+            align-self: flex-start;
+        }
+
         .report-item .date {
             font-size: 12px;
             color: rgba(255, 255, 255, 0.25);
             white-space: nowrap;
-            align-self: flex-start;
-            margin-top: 4px;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .lang-btn {
+            font-size: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 2px 8px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: #785aff;
+            color: #0a0a0a;
+        }
+
+        .lang-btn.available {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .lang-btn.available:hover {
+            color: #fff;
+            background: rgba(120, 90, 255, 0.2);
         }
 
         @media (max-width: 480px) {
@@ -149,9 +187,14 @@
                 text-align: left;
                 width: auto;
             }
-            .report-item .date {
-                align-self: flex-end;
-                margin-top: 0;
+            .report-item .meta-side {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                width: 100%;
+                align-self: center;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+                padding-top: 10px;
+                margin-top: 4px;
             }
         }
     </style>
@@ -168,27 +211,35 @@
             <i class="fas fa-file-lines main-icon"></i>
             <div class="info">
                 <div class="title">RE // SolaraBootstrapper.exe</div>
-                <div class="desc">RustC dropper (не дописано)</div>
+                <div class="desc">RustC dropper</div>
                 <div class="tags">
                     <span class="tag">Dropper</span>
                     <span class="tag">Rust</span>
                     <span class="tag">Stealer</span>
                 </div>
             </div>
-            <div class="date">Июнь 2026</div>
+            <div class="meta-side">
+                <div class="date">Июнь 2026</div>
+                <div class="lang-switch">
+                    <span class="lang-btn active">RU</span>
+                    <object><a href="/reports/solara/en/" class="lang-btn available" onclick="event.stopPropagation();">EN</a></object>
+                </div>
+            </div>
         </a>
 
         <a href="/reports/" class="report-item">
             <i class="fas fa-file-lines main-icon"></i>
             <div class="info">
-                <div class="title">RE // Тестовый отчет</div>
-                <div class="desc">Описание тестового разбора</div>
+                <div class="title">Test</div>
+                <div class="desc">Test_desc</div>
                 <div class="tags">
                     <span class="tag">Test</span>
                     <span class="tag">Malware</span>
                 </div>
             </div>
-            <div class="date">Май 2026</div>
+            <div class="meta-side">
+                <div class="date">Июнь 2026</div>
+            </div>
         </a>
 
         <div style="margin-top: 40px; font-size: 13px; color: rgba(255,255,255,0.15); text-align: center; letter-spacing: 1px;">
@@ -197,3 +248,4 @@
     </div>
 </body>
 </html>
+
